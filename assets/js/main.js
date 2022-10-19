@@ -6,15 +6,13 @@ let resetBtn = document.getElementById('reset');
 let box = document.querySelector('.box');
 let ball = document.querySelector('.ball');
 let step = document.getElementById('step').value;
+let boxColor = document.getElementById('boxColor');
+let ballColor = document.getElementById('ballColor');
 
 save();
 resetBall();
 
 saveBtn.addEventListener('click', function () {
-    boxX.value = 700;
-    boxY.value = 500;
-    ballXY.value = 60;
-    step = 10;
     save();
     resetBall();
 })
@@ -29,7 +27,6 @@ resetBtn.addEventListener('click', function () {
 })
 
 function save() {
-
     box.style.height = parseInt(boxY.value) + 'px';
     box.style.width = parseInt(boxX.value) + 'px';
     ball.style.height = parseInt(ballXY.value) + 'px';
